@@ -1,0 +1,24 @@
+{
+  "name": "online-device-notifications",
+  "version": "1.0.0",
+  "description": "Send a pushover notification if a device does not announce itself for a set time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jangxx/online-device-notifications.git"
+  },
+  "author": "Jan Scheiper <jangxx@protonmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jangxx/online-device-notifications/issues"
+  },
+  "homepage": "https://github.com/jangxx/online-device-notifications#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "luxon": "^1.25.0",
+    "pushover-notifications": "^1.2.2"
+  }
+}
