@@ -20,6 +20,7 @@ const pushover = new Push({
     token: process.env.PUSHOVER_TOKEN,
 });
 
+console.log("Registered devices:");
 for (let definition_str of process.env.DEVICES.split("|")) {
     const definition = definition_str.split(";");
 
@@ -27,6 +28,8 @@ for (let definition_str of process.env.DEVICES.split("|")) {
         name: (definition.length > 1) ? definition[1] : definition[0],
         lastReport: null,
     };
+
+    console.log(`  ${definition[0]}: ${devices[definition[0]].name}`);
 }
 
 const timeoutSeconds = ("TIMEOUT" in process.env) ? process.env.TIMEOUT : 3 * 60; // 3 minute default timeout
