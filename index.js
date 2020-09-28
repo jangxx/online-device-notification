@@ -86,3 +86,8 @@ setInterval(() => {
         }
     }
 }, 10000); // check for offline devices every 10 seconds
+
+// send opening notification
+pushover.send({
+    message: `Server started`,
+});
